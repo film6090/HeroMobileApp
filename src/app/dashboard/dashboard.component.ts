@@ -16,4 +16,7 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
     this.heroes = this.heroService.getHeroes().slice(0,5);
   }
+  edit(id:number , name:string){
+      
+  }
 }
