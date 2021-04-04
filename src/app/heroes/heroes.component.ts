@@ -16,4 +16,9 @@ export class HeroesComponent implements OnInit {
   ngOnInit(): void {
     this.heroes = this.heroService.getHeroes()
   }
+  add( name:string ){
+    if(name!=''){
+      this.heroService.getnewHero( name );
+    }
+  }
 }

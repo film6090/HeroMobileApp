@@ -23,4 +23,12 @@ export class HeroService {
     getHero(id: number): Hero {
       return this.heroes.filter((item) => item.id === id)[0]
     }
+    getnewHero( name:string ) {
+      this.heroes.push(
+        {
+            "id": this.heroes[this.heroes.length-1].id+1 ,
+            "name": name
+        }
+    );
+    }
   }

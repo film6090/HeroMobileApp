@@ -1,11 +1,14 @@
 <ActionBar [title]="title"> </ActionBar>
-
-<GridLayout>
-    <ListView [items]="heroes">
-      <ng-template let-item="item">
-        <StackLayout>
-          <Label [nsRouterLink]="['/hero', item.id]" [text]="item.name" class = "h2"></Label>
-        </StackLayout>
-      </ng-template>
-    </ListView>
+<StackLayout>
+  <TextField class='h2' #heroName hint="Enter Hero's name" margin="5" > </TextField>
+  <Button  text="Add" (tap) = "add(heroName.text)"></Button>
+  <GridLayout>
+      <ListView [items]="heroes">
+        <ng-template let-item="item">
+          <StackLayout>
+            <Label [nsRouterLink]="['/hero', item.id]" [text]="item.name" class = "h2"></Label>
+          </StackLayout>
+        </ng-template>
+      </ListView>
   </GridLayout>
+</StackLayout>
