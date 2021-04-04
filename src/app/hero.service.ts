@@ -28,7 +28,14 @@ export class HeroService {
         {
             "id": this.heroes[this.heroes.length-1].id+1 ,
             "name": name
+        });
+    }
+    getEditHero(id:number , name:string){
+      for(let i = 0; i < this.heroes.length; i++) {
+        if(this.heroes[i].id == id) {
+            this.heroes[i].name = name;
+            break;
         }
-    );
+    }
     }
   }

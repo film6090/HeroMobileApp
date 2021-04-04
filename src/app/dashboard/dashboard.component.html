@@ -1,6 +1,7 @@
 <ActionBar [title]="title"> </ActionBar>
 <TabView>
     <StackLayout *tabItem="{title : 'Dashboard'}">
+      <Label class='h1' text="Top Hero"></Label>
         <ListView [items]="heroes">
             <ng-template let-item="item">
               <StackLayout>

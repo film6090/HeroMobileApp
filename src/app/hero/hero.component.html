@@ -2,9 +2,10 @@
 
 <FlexboxLayout flexDirection="column">
   <StackLayout >
-    <Label class="h2" [text]="hero.id + '. '"></Label>
+    <Label class="h2" [text]="'ID : '+ hero.id "></Label>
     <!--<Label class="h2" [text]="hero.name"></Label>-->
-    <TextField ></TextField>
+    <TextField #heroName hint="Enter Edit Hero's Name" [text]="hero.name" class='h2'></TextField>
+    <button text="Edit" (tap)="edit( hero.id , heroName.text)"></button>
     <button text="Back" (tap) ="back()"></button>
   </StackLayout>
 </FlexboxLayout>

@@ -19,7 +19,11 @@ export class HeroComponent implements OnInit {
     const id = +this.route.snapshot.params.id
     this.hero = this.heroService.getHero(id)
   }
-  public back() {
+  back() {
     this.location.back();
-}
+  }
+  edit(id:number , name:string){
+    this.heroService.getEditHero( id,name );
+    this.back()
+  }
 }
