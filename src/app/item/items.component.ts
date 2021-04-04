@@ -8,11 +8,11 @@ import { ItemService } from './item.service'
   templateUrl: './items.component.html',
 })
 export class ItemsComponent implements OnInit {
-  items: Array<Item>
+  hay: Array<Item>
 
   constructor(private itemService: ItemService) {}
 
   ngOnInit(): void {
-    this.items = this.itemService.getItems()
+    this.hay = this.itemService.getItems()
   }
 }

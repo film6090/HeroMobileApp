@@ -1,0 +1,11 @@
+<ActionBar [title]="title"> </ActionBar>
+
+<GridLayout>
+    <ListView [items]="heroes">
+      <ng-template let-item="item">
+        <StackLayout>
+          <Label [text]="item.name" ></Label><!--[nsRouterLink]="['/hero', hero.id]"--> 
+        </StackLayout>
+      </ng-template>
+    </ListView>
+  </GridLayout>
