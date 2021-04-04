@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Hero } from'./hero'
-
+//เก็บข้อมูลเปิด เก็บฟังก์ชั่นที่จะไว้ใช้ในการเรียกข้อมูลโดยจะทำงานใน component จาก ฟังก์ชั่นของ Component อีกที
 @Injectable({
   providedIn: 'root',
 })
