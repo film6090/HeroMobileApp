@@ -1,10 +1,10 @@
 <ActionBar [title]="title"></ActionBar>
 
 <FlexboxLayout flexDirection="column">
-  <FlexboxLayout >
-      
+  <StackLayout >
     <Label class="h2" [text]="hero.id + '. '"></Label>
-    <Label class="h2" [text]="hero.name"></Label>
-
-  </FlexboxLayout>
+    <!--<Label class="h2" [text]="hero.name"></Label>-->
+    <TextField ></TextField>
+    <button text="Back" (tap) ="back()"></button>
+  </StackLayout>
 </FlexboxLayout>

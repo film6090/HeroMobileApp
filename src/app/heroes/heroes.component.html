@@ -4,7 +4,7 @@
     <ListView [items]="heroes">
       <ng-template let-item="item">
         <StackLayout>
-          <Label [nsRouterLink]="['/hero', item.id]" [text]="item.name" ></Label>
+          <Label [nsRouterLink]="['/hero', item.id]" [text]="item.name" class = "h2"></Label>
         </StackLayout>
       </ng-template>
     </ListView>

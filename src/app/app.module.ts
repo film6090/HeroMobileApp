@@ -9,12 +9,14 @@ import { ItemDetailComponent } from './item/item-detail.component'
 import { HeroesComponent } from './heroes/heroes.component'
 import { HeroComponent } from './hero/hero.component'
 
+import { DashboardComponent } from './dashboard/dashboard.component'
 import { HeroService } from "./hero.service";
 
 @NgModule({
   bootstrap: [AppComponent],
   imports: [NativeScriptModule, AppRoutingModule ],
-  declarations: [AppComponent, HeroesComponent ,ItemsComponent , ItemDetailComponent , HeroComponent],
+  declarations: [AppComponent, HeroesComponent ,ItemsComponent , ItemDetailComponent 
+                , HeroComponent ,DashboardComponent],
   providers: [HeroService],
   schemas: [NO_ERRORS_SCHEMA],
 })

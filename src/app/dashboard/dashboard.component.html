@@ -1,0 +1,16 @@
+<ActionBar [title]="title"> </ActionBar>
+<TabView>
+    <StackLayout *tabItem="{title : 'Dashboard'}">
+        <ListView [items]="heroes">
+            <ng-template let-item="item">
+              <StackLayout>
+                <Label [nsRouterLink]="['/hero', item.id]" [text]="item.name" class = "h2"></Label>
+              </StackLayout>
+            </ng-template>
+          </ListView>  
+    </StackLayout>
+
+<StackLayout *tabItem="{title : 'Heroes'}">
+    <ns-heroes></ns-heroes>
+</StackLayout>
+</TabView>

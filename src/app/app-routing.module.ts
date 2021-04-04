@@ -7,13 +7,15 @@ import { ItemDetailComponent } from './item/item-detail.component'
 
 import { HeroesComponent } from './heroes/heroes.component'
 import { HeroComponent } from './hero/hero.component'
+import { DashboardComponent } from './dashboard/dashboard.component'
 
 const routes: Routes = [
-  { path: '', redirectTo: '/heroes', pathMatch: 'full' },
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'items', component: ItemsComponent },
   { path: 'item/:id', component: ItemDetailComponent },
   { path: 'heroes' , component : HeroesComponent },
-  { path: 'hero/:id', component:HeroComponent }
+  { path: 'hero/:id', component:HeroComponent },
+  { path: 'dashboard', component:DashboardComponent }
 ]
 
 @NgModule({
