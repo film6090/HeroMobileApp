@@ -38,4 +38,12 @@ export class HeroService {
         }
     }
     }
+    getDeleteHero(id:number){
+      for(let i = 0; i < this.heroes.length; i++) {
+        if(this.heroes[i].id == id) {
+            this.heroes.splice(i, 1);
+            break;
+        }
+    }
   }
+}

@@ -6,6 +6,7 @@
     <!--<Label class="h2" [text]="hero.name"></Label>-->
     <TextField #heroName hint="Enter Edit Hero's Name" [text]="hero.name" class='h2'></TextField>
     <button text="Edit" (tap)="edit( hero.id , heroName.text)"></button>
+    <button text="Delete" (tap)="delete( hero.id )"></button>
     <button text="Back" (tap) ="back()"></button>
   </StackLayout>
 </FlexboxLayout>

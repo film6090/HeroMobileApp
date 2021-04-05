@@ -10,20 +10,24 @@ import { HeroService } from '../hero.service'
   templateUrl: './hero.component.html',
 })
 export class HeroComponent implements OnInit {
-  title = "Hero Detail"
-  hero : Hero
+  title = "Hero Detail";
+  hero : Hero;
 
   constructor( private heroService :HeroService ,  private route: ActivatedRoute ,private location: Location) { }
 
   ngOnInit(): void {
-    const id = +this.route.snapshot.params.id
-    this.hero = this.heroService.getHero(id)
+    const id = +this.route.snapshot.params.id;
+    this.hero = this.heroService.getHero(id);
   }
   back() {
     this.location.back();
   }
   edit(id:number , name:string){
     this.heroService.getEditHero( id,name );
-    this.back()
+    this.back();
+  }
+  delete(id:number){
+    this.heroService.getDeleteHero( id );
+    this.back();
   }
 }
