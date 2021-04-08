@@ -17,11 +17,7 @@ export class HeroesComponent implements OnInit {
     this.heroes = this.heroService.getHeroes()
   }
   add(){
-    console.log("active!");
-    console.log(this.heroName);
-    
     if(this.heroName != undefined || this.heroName != null){
-      console.log("work!");
       this.heroService.getnewHero( this.heroName );
       this.heroName = '';
     }

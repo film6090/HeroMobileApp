@@ -1,7 +1,7 @@
 <ActionBar [title]="title"> </ActionBar>
 <StackLayout>
-  <TextField class='h2' #heroName hint="Enter Hero's name" margin="5" > </TextField>
-  <Button  text="Add" (tap) = "add(heroName.text)"></Button>
+  <TextField class='h2' hint="Enter Hero's name" margin="5" [(ngModel)]="heroName" > </TextField>
+  <Button  text="Add" (tap) = "add()"></Button>
   <GridLayout>
       <ListView [items]="heroes">
         <ng-template let-item="item">
