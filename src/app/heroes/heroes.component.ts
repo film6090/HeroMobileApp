@@ -8,7 +8,6 @@ import { HeroService } from '../hero.service'
   templateUrl: './heroes.component.html',
 })
 export class HeroesComponent implements OnInit {
-  title = "Tour of Heroes"
   heroes : Array<Hero>;
   heroName : string;
   constructor( private heroService :HeroService ) { }

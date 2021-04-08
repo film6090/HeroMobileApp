@@ -10,12 +10,14 @@ import { HeroComponent } from './hero/hero.component'
 
 import { DashboardComponent } from './dashboard/dashboard.component'
 import { HeroService } from "./hero.service";
+import { MenuComponent } from "./menu/menu.component"
 
 @NgModule({
   bootstrap: [AppComponent],
   imports: [NativeScriptModule, AppRoutingModule, NativeScriptFormsModule ],
-  declarations: [AppComponent, HeroesComponent 
-                , HeroComponent ,DashboardComponent],
+  declarations: [AppComponent, HeroesComponent, 
+                HeroComponent, DashboardComponent, 
+                MenuComponent],
   providers: [HeroService],
   schemas: [NO_ERRORS_SCHEMA],
 })

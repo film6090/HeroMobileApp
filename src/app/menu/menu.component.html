@@ -1,0 +1,10 @@
+<ActionBar [title]="title"> </ActionBar>
+    <TabView>
+        <StackLayout *tabItem="{title : 'Dashboard'}">
+            <ns-dashboard></ns-dashboard> 
+        </StackLayout> 
+        
+        <StackLayout *tabItem="{title : 'Heroes'}">
+            <ns-heroes></ns-heroes>
+        </StackLayout>
+    </TabView>

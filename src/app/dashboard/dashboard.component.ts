@@ -8,15 +8,14 @@ import { HeroService } from '../hero.service'
   templateUrl: './dashboard.component.html',
 })
 export class DashboardComponent implements OnInit {
-  title = "Tour of Heroes";
   heroes : Array<Hero>;
 
   constructor( private heroService :HeroService ) { }
 
   ngOnInit(): void {
-    this.heroes = this.heroService.getHeroes().slice(0,5);
+    this.viewTophero();
   }
-  edit(id:number , name:string){
-      
+  viewTophero(){
+    this.heroes = this.heroService.getHeroes().slice(0,5);
   }
 }
